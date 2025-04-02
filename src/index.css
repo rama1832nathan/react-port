@@ -26,6 +26,12 @@
 
 @import "tailwindcss";
 
+@layer utilities {
+    .text-stroke {
+      -webkit-text-stroke: 2px black;
+    }
+  }
+
 @theme{
     --font-nebulax : Nebulax,"sans-serif";
     --font-monoton : "Monoton",sans-serif;
