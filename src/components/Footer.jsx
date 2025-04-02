@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         
  
-        <div className="text-4xl font-extrabold text-amber-500 font-lucky text-stroke">
+        <div className="text-4xl font-extrabold text-amber-500 font-lucky drop-shadow-[black_1rem_1rem_10px]">
           Ramanathan   K
         </div>
 
