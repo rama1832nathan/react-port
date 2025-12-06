@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         
  
-        <div className="text-2xl font-extrabold text-amber-500 font-lucky text-stroke">
-          Ramanathan   K
-        </div>
+        <div className="text-3xl font-extrabold text-amber-500 font-lucky text-stroke">
+  Ramanathan   K
+</div>
         {/* <div style="font-size: 2xl; font-weight: 800; color: #f59e0b; font-family: 'Lucky'; -webkit-text-stroke: 2px black;">
   Ramanathan K
 </div> */}
