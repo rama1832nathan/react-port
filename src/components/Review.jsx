@@ -43,7 +43,7 @@ const Review = () => {
   };
 
   return (
-    <div id="contact" className="flex flex-col items-center justify-center min-h-screen bg-navy p-6">
+    <div id="contact" className="flex flex-col items-center justify-center min-h-screen p-6">
       <Title name={"contact me"} />
 
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg font-poppins w-full max-w-md">

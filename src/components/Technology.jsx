@@ -22,29 +22,33 @@ const Experience = () => {
     const borderStyle = "border-4 border-navy rounded-2xl";
 
 return (
-    <div id="techstack" className='h-[80vh] items-center bg-navy p-4 sm:p-8 relative'>
+    <div id="techstack" className='h-[80vh] items-center p-4 sm:p-8 relative'>
         <Title name={"Technology known"} />
         <div className="mt-40 mb-40 flex flex-wrap justify-center gap-10">
             {images.map((image) => (
-                <motion.img
-                    key={image.id}
-                    src={image.img}
-                    alt={`Technology ${image.id}`}
-                    className="w-20 h-20 lg:h-40 lg:w-40 md:w-30 md:h-30 rounded-2xl"
-                    initial={{
-                        rotate: image.id % 2 === 0 ? -15 : 15,
-                    }}
-                    whileHover={{
-                        scale: 1.2,
-                        rotate: 0,
-                        transition: { duration: 0.3 },
-                        cursor: "pointer",
-                    }}
-                    whileTap={{
-                        scale: 0.9,
-                        rotate: image.id % 2 === 0 ? -15 : 15,
-                    }}
-                />
+                <div key={image.id} className="flex flex-col items-center gap-4 group">
+                    <motion.div
+                        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-navy/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl flex items-center justify-center p-4 shadow-lg group-hover:border-lorange/50 group-hover:shadow-lorange/20 transition-all duration-300"
+                        initial={{
+                            rotate: image.id % 2 === 0 ? -5 : 5,
+                        }}
+                        whileHover={{
+                            scale: 1.1,
+                            rotate: 0,
+                            transition: { duration: 0.1 },
+                            cursor: "pointer",
+                        }}
+                        whileTap={{
+                            scale: 0.95,
+                        }}
+                    >
+                        <img
+                            src={image.img}
+                            alt={`Technology ${image.id}`}
+                            className="w-full h-full object-contain filter drop-shadow-md"
+                        />
+                    </motion.div>
+                </div>
             ))}
         </div>
     </div>

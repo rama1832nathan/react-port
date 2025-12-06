@@ -6,36 +6,44 @@ import Review from './Review'
 import Footer from './Footer'
 import Intro from './Intro'
 import Navbar from './Navbar'
-import { useScroll,motion } from 'motion/react'
+import { motion } from 'motion/react'
+import GalaxyBackground from './GalaxyBackground'
+
 
 const Profile = () => {
-  const {scrollYProgress} = useScroll();
-
   return (
     <>
-    <motion.div
-    id="scroll-indicator"
-    style={{
-      scaleX: scrollYProgress,
-      position: "fixed",
-      top: 65,
-      left: 0,
-      right: 0,
-      height: 5,
-      originX: 0,
-      backgroundColor: "#ffff00",
-      zIndex: 50, // Ensure it's above everything
-    }}
-  />
-    <div className='page-content min-h-screen overflow-y-auto overflow-x-hidden bg-navy text-powder relative  '>
+
+    <div className='page-content min-h-screen overflow-y-auto overflow-x-hidden bg-navy text-powder relative'>
       <Navbar/>
-      <Intro/>
-      <About />
-      {/* <About /> */}
-      <Tech/>
-      <Experience />
-      <Myprojects />
-      <Review/>
+      
+      {/* Group 1: Blue Galaxy */}
+      <div className="relative w-full">
+        <GalaxyBackground variant="blue" />
+        <div className="relative z-10">
+          <Intro/>
+          <About />
+        </div>
+      </div>
+
+      {/* Group 2: Black & White Galaxy */}
+      <div className="relative w-full">
+        <GalaxyBackground variant="gray" />
+        <div className="relative z-10">
+          <Tech/>
+          <Experience />
+        </div>
+      </div>
+
+      {/* Group 3: Blue Galaxy */}
+      <div className="relative w-full">
+        <GalaxyBackground variant="blue" />
+        <div className="relative z-10">
+          <Myprojects />
+          <Review/>
+        </div>
+      </div>
+
       <Footer />
     </div>
     </>

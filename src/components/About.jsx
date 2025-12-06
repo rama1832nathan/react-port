@@ -6,7 +6,7 @@ import Myphoto from "../assets/images/Rama.webp";
 
 const About = () => {
   return (
-    <div id="about" className="h-[100vh] bg-navy px-4 sm:px-8 py-8">
+    <div id="about" className="h-[100vh] px-4 sm:px-8 py-8 relative">
       <Title name={"About Me"} />
 
       <EnterAnimation>
